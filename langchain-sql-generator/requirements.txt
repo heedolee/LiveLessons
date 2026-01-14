@@ -1,0 +1,22 @@
+# FastAPI and Server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+python-multipart==0.0.6
+
+# LangChain 1.0.0 and related packages
+langchain==1.0.0
+langchain-community==0.3.13
+langchain-openai==0.2.14
+langchain-core==0.3.28
+
+# Database
+SQLAlchemy==2.0.25
+pymysql==1.1.0
+cryptography==41.0.7
+
+# OpenAI
+openai==1.58.1
+
+# Utilities
+python-dotenv==1.0.0
