@@ -1,0 +1,36 @@
+# Database Schema Description
+
+## Table: users
+- id (INT, PRIMARY KEY): 사용자의 고유 식별자
+- name (VARCHAR(100)): 사용자의 이름
+- email (VARCHAR(100)): 사용자의 이메일 주소
+- age (INT): 사용자의 나이
+- created_at (DATETIME): 사용자 생성 일시
+- status (VARCHAR(20)): 사용자 상태 (active, inactive, suspended)
+
+## Table: products
+- id (INT, PRIMARY KEY): 제품의 고유 식별자
+- name (VARCHAR(200)): 제품명
+- description (TEXT): 제품 설명
+- price (DECIMAL(10,2)): 제품 가격
+- stock (INT): 재고 수량
+- category (VARCHAR(50)): 제품 카테고리
+- created_at (DATETIME): 제품 등록 일시
+
+## Table: orders
+- id (INT, PRIMARY KEY): 주문의 고유 식별자
+- user_id (INT, FOREIGN KEY): 주문한 사용자의 ID (users.id 참조)
+- product_id (INT, FOREIGN KEY): 주문 제품의 ID (products.id 참조)
+- quantity (INT): 주문 수량
+- total_price (DECIMAL(10,2)): 총 주문 금액
+- order_date (DATETIME): 주문 일시
+- status (VARCHAR(20)): 주문 상태 (pending, completed, cancelled)
+
+## Table Relationships
+- orders.user_id는 users.id를 참조합니다
+- orders.product_id는 products.id를 참조합니다
+
+## Common Query Patterns
+- 사용자별 주문 조회: users와 orders 조인
+- 제품별 판매량 조회: products와 orders 조인
+- 특정 기간의 매출 조회: orders 테이블의 order_date와 total_price 사용
