@@ -1,0 +1,30 @@
+# ============================================================
+# SSD 지능형 결함 분석 시스템 (SQLAlchemy + OpenAI 버전)
+# ============================================================
+
+# --- 웹 프레임워크 ---
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# --- ORM / DB ---
+SQLAlchemy==2.0.30          # ORM 코어 (text(), Session, declarative_base 등)
+PyMySQL==1.1.0              # mysql+pymysql dialect 드라이버
+
+# --- AI / LLM ---
+langchain==0.1.20
+langchain-openai==0.1.8     # ChatOpenAI, OpenAIEmbeddings
+langchain-community==0.0.38 # Chroma 등
+langchain-chroma==0.1.1
+
+# --- 벡터 DB ---
+chromadb==0.5.0
+
+# --- 데이터 검증 ---
+pydantic==2.7.1             # BaseModel, Field (직렬화 및 익명화)
+pydantic-settings==2.2.1    # BaseSettings (.env 자동 로드)
+
+# --- 환경 변수 ---
+python-dotenv==1.0.1
+
+# --- OpenAI SDK ---
+openai==1.30.5
