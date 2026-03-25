@@ -1,0 +1,24 @@
+# ============================================================
+# SSD 지능형 결함 분석 시스템 - Python 의존성 패키지 목록
+# 100% 오프라인 로컬 환경을 전제로 하므로,
+# 사전에 pip download 등으로 로컬 미러에 캐시해 두어야 합니다.
+# ============================================================
+
+# --- 웹 프레임워크 ---
+fastapi==0.111.0          # FastAPI 비동기 웹 프레임워크
+uvicorn[standard]==0.29.0 # ASGI 서버 (표준 extras: websockets, httptools 포함)
+
+# --- DB 연결 ---
+PyMySQL==1.1.0            # MariaDB / MySQL 순수 파이썬 드라이버 (C 확장 불필요)
+
+# --- AI / LLM 프레임워크 ---
+langchain==0.1.20         # LangChain 코어 (LCEL 파이프라인 포함)
+langchain-community==0.0.38  # Ollama, Chroma 등 커뮤니티 인테그레이션
+langchain-chroma==0.1.1   # Chroma 벡터 스토어 LangChain 래퍼
+
+# --- 로컬 임베딩 / 벡터 DB ---
+chromadb==0.5.0           # Chroma 벡터 데이터베이스 (로컬 영속화 지원)
+
+# --- 유틸리티 ---
+python-dotenv==1.0.1      # .env 파일로부터 환경 변수 로드
+pydantic==2.7.1           # 데이터 검증 (FastAPI 내부 의존)
