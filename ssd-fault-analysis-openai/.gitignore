@@ -1,0 +1,19 @@
+# ⚠️  API 키가 담긴 .env 는 절대 커밋 금지
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+
+# Chroma DB (로컬 벡터 DB)
+chroma_db/
+
+# IDE
+.vscode/
+.idea/

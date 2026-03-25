@@ -1,0 +1,10 @@
+{
+  "_comment": "DB 컬럼명 → 한글 자연어 레이블 매핑 사전. database.py의 직렬화 및 마스킹 함수가 참조합니다.",
+  "timestamp":    "발생시각",
+  "device_id":    "장치ID",
+  "cmd_name":     "커맨드",
+  "arg_name":     "인자명",
+  "arg_value":    "인자값",
+  "temp":         "온도(C)",
+  "error_count":  "에러횟수"
+}
